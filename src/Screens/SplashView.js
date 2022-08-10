@@ -1,14 +1,14 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 
-function SplashScreen({ navigation }) {
+function SplashView({ navigation }) {
   return (
     <View style={styles.container}>
       <Text>Halaman Splash</Text>
       <Text></Text>
       <Button
-        title="Go to Register"
-        onPress={() => navigation.navigate('Register')}
+        title="Go to Login"
+        onPress={() => navigation.navigate('Auth')}
       />
     </View>
   );
@@ -27,4 +27,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SplashScreen;
+export default SplashView;

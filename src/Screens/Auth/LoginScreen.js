@@ -8,7 +8,7 @@ function LoginScreen({ navigation }) {
       <Text></Text>
       <Button
         title="Go to Register"
-        onPress={() => navigation.navigate('Register')}
+        onPress={() => navigation.navigate('RegisterScreen')}
       />
     </View>
   );

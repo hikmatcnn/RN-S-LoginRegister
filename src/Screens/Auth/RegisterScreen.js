@@ -7,8 +7,8 @@ function RegisterScreen({ navigation }) {
       <Text>Halaman Register</Text>
       <Text></Text>
       <Button
-        title="Go to Register"
-        onPress={() => navigation.navigate('Register')}
+        title="Go to SplashScreen"
+        onPress={() => navigation.navigate('SplashScreen')}
       />
     </View>
   );
