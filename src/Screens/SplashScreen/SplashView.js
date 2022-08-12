@@ -17,7 +17,7 @@ function SplashView({ navigation }) {
 
   useEffect(() => {
     setTimeout(() => {
-      getData();
+      // getData();
       setAnimating(false);      
     }, 5000);
   }, []);
@@ -38,7 +38,7 @@ function SplashView({ navigation }) {
         size="large"
         style={styles.activityIndicator}
       />
-      <Text>Splash Screen 01</Text>
+      <Text></Text>
       <Button
         title="Next"
         onPress={() => navigation.navigate('SplashScreen02')}

@@ -26,7 +26,7 @@ function SplashView02({ navigation }) {
         size="large"
         style={styles.activityIndicator}
       />
-      <Text>Splash Screen 02</Text>
+      <Text></Text>
       <Button
         title="Next"
         onPress={() => navigation.navigate('HomeScreen')}

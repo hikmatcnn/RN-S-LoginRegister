@@ -34,27 +34,29 @@ function LoginScreen({ navigation }) {
       return;
     }
     setLoading(true);
-    const formData = new FormData();
-    formData.append("email", userEmail);
-    formData.append("password", userPassword);
+    const DataForm ={
+      "email":userEmail,
+      "password":userPassword
+    };
     const config = {
       headers: {
-        "content-type": "multipart/form-data"
+        "content-type": "application/json"
       }
     };
-    try {
-      const res = await AxiosApi.post('/api/user/login', formData, config);
-      setLoading(false);
-      navigation.navigate('SplashScreen');
-      if (res.data.status === 'success'){
-        navigation.navigate('SplashScreen')
-      }else{
-        setErrortext(res.data.msg);        
-      }      
-    } catch (error) {
-      setLoading(false);
-      console.error(error);
-    }
+    setLoading(false); 
+    
+    // try {
+    //   const res = await AxiosApi.post('/api/user/login', DataForm, config);
+    //   setLoading(false);      
+    //   if (res.data.status === 'success'){
+    //     navigation.navigate('SplashScreen')
+    //   }else{
+    //     setErrortext(res.data.msg);        
+    //   }      
+    // } catch (error) {
+    //   setLoading(false);
+    //   console.error(error);
+    // }
   };
 
   return (
