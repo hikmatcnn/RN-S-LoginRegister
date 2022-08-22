@@ -44,6 +44,7 @@ function LoginScreen({ navigation }) {
       }
     };
     setLoading(false); 
+    navigation.navigate('SplashScreen')
     
     // try {
     //   const res = await AxiosApi.post('/api/user/login', DataForm, config);
