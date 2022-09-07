@@ -1,6 +1,6 @@
 import axios from 'axios'
-import { Config } from '.'
+import {API_URL} from './constant'
 
 export default axios.create({
-    baseURL:`${Config.API_URL}`
+    baseURL:`${API_URL}`
 })
