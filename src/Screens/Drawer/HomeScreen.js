@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, SafeAreaView, StyleSheet, Dimensions, Image,ImageBackground } from 'react-native';
 import {WARNA_ABU_ABU} from '../../Config/constant';
-import {ImageTikomdik, CabinHome, ImageHeader, Logo} from '../../Assets/Images';
+import {ImageTikomdik, CabinHome, ImageHeader, Logo, Home001} from '../../Assets/Images';
 
 function HomeScreen() {
     return (
@@ -13,25 +13,33 @@ function HomeScreen() {
               <Text style={styles.selamat}>Selamat Datang, </Text>
               <Text style={styles.username}>SMA NEGERI 12 BANDUNG</Text>
             </View>
+            <Text style={styles.label}></Text>
+            <Text style={styles.label}>Berita</Text>
+            <Image source={Home001} style={styles.gambarBerita}/>
           </ImageBackground>
+          
           <View style={styles.layanan}>
-          <Text style={styles.label}>Layanan Kami</Text>
+          <Text style={styles.label}>Menu</Text>
           <View style={styles.iconLayanan}>
             <View style={styles.container}>
               <View style={styles.cardHomeOne}>
                 <Image style={styles.squareOne} source={CabinHome} />
                 <Text style={styles.textIcon}>
-                  Biodata Diri
+                  Manajemen Jurusan
                 </Text>
               </View>
-              <View style={styles.cardHomeTwo}>
+              <View style={styles.cardHomeOne}>
                 <Image style={styles.squareOne} source={CabinHome} />
-                <Text style={styles.textIcon}>Konfirmasi kelas</Text>
+                <Text style={styles.textIcon}>
+                  Manajemen Kelas
+                </Text>
               </View>
-              <View style={styles.cardHome}>
+              <View style={styles.cardHomeOne}>
                 <Image style={styles.squareOne} source={CabinHome} />
-                <Text style={styles.textIcon}>Presensi Sekolah</Text>
-              </View>
+                <Text style={styles.textIcon}>
+                  Manajemen Anggota Kelas
+                </Text>
+              </View>              
             </View>
           </View>
         </View>
@@ -55,6 +63,7 @@ const styles = StyleSheet.create({
     height: windowHeight * 0.3,
     paddingHorizontal: 30,
     paddingTop: 10,
+    marginBottom:120,
   },
   logo: {
     width: windowWidth * 0.25,
@@ -136,5 +145,12 @@ const styles = StyleSheet.create({
     height: 100,
     resizeMode: 'contain',
     margin: 30,
+  },
+  gambarBerita: {    
+    alignItems: 'center', // ignore this - we'll come back to it
+    justifyContent: 'center', // ignore this - we'll come back to it
+    width: '100%',
+    height: '70%',
+    paddingBottom: 40,
   },
 });
